@@ -155,8 +155,7 @@ echo -e '\n\e[42mCheck node status\e[0m\n' && sleep 1
 
 if [[ `service mantrachaind status | grep active` =~ "running" ]]; then
   echo -e "Your Mantrachain node \e[32minstalled and works\e[39m!"
-  echo -e "You can check node status by the command: \e[7mcurl -s localhost:${PORT}657/status | jq .result.sync_info.catching_up\e[0m"
-  echo -e "Check logs with: \e[7msudo journalctl -u mantrachaind -f\e[0m"
+  echo -e "Check logs : \e[7msudo journalctl -u mantrachaind -f\e[0m"
 else
   echo -e "Your Mantrachain node \e[31mwas not installed correctly\e[39m, please reinstall."
 fi
